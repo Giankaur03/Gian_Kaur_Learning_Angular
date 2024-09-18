@@ -1,10 +1,12 @@
-<html>
-<head>
-  <title>{{title}}
-  </title>
-</head>
-<body>
-<h1>{{name}}</h1>
-<h5>{{course}}</h5>
-</body>
-</html>
+<div class="books">
+  <h1>Books List</h1>
+  <div *ngFor="let books of bookList" class="user-card">
+    <h2>{{ books.bookName }} </h2>
+    <p>ID: {{ books.id }}</p>
+    <p>Author: {{ books.author }}</p>
+    <p>Release Date: {{ books.releaseDate }}</p>
+    <p>Category: {{ books.category }}</p>
+    <p>Availability: {{ books.availability }}</p>
+
+  </div>
+</div>
