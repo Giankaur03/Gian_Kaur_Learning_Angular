@@ -6,7 +6,10 @@
     <p>Author: {{ books.author }}</p>
     <p>Release Date: {{ books.releaseDate }}</p>
     <p>Category: {{ books.category }}</p>
-    <p>Availability: {{ books.availability }}</p>
+    <p>Availability: {{ books.availability ? 'Yes' : 'No' }}</p>
+    <button (click)="toggleAvailabilityStatus(books)" class="toggle-button">
+      Availability
+    </button>
 
   </div>
 </div>

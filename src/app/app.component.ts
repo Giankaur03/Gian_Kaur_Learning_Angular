@@ -23,4 +23,8 @@ export class AppComponent {
       {id: 5, bookName: "The Haunting of Hill House", author: "Shirley Jackson", releaseDate: 1959, category: "Horror", availability:true},
       {id: 6, bookName: "The Girl with the Dragon Tattoo", author: "Stieg Larsson", releaseDate: 2005, category: "Mystery/Thriller", availability:true}
     ]
+
+  toggleAvailabilityStatus(user: Books): void {
+    user.availability = !user.availability;
+  }
 }
