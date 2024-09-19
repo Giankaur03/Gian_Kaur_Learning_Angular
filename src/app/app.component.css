@@ -1,0 +1,39 @@
+div{
+  background-color: #b3ffd9;;
+}
+
+h1{
+  text-align: center;
+  font-size: 80px;
+  color: #06130d;
+  margin-bottom: 20px;
+  background-color: #b3ffd9;
+  font-family: "Candara";
+}
+
+h2{
+  color: #184e35;
+  font-family: "Bookman Old Style";
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.books {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: aquamarine;
+}
+
+p{
+  margin-left: 10px;
+}
+
+.toggle-button {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.toggle-button:hover {
+  background-color: #66ff66;
+}
