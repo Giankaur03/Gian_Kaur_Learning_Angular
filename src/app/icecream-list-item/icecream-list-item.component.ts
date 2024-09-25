@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Icecream} from "../Shared/Modules/icecream";
 
 @Component({
   selector: 'app-icecream-list-item',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './icecream-list-item.component.css'
 })
 export class IcecreamListItemComponent {
+@Input()
+  icecream!: Icecream;
 
 }

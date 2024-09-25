@@ -1,1 +1,14 @@
-<p>icecream-list works!</p>
+<div>
+  <table>
+    <tbody>
+    <tr *ngFor="let icecream of IcecreamList" >
+
+      <td>{{ icecream.id }}</td>
+      <td>{{ icecream.flavour }}</td>
+      <td>{{ icecream.brand }}</td>
+      <td>{{ icecream.price }}</td>
+      <td>{{ icecream.toppings ? 'Yes' : 'No' }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
