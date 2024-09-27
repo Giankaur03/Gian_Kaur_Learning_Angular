@@ -1,3 +1,4 @@
-<div *ngFor="let icecream of IcecreamList">
+<div *ngFor="let icecream of IcecreamList; let i = index"
+     [ngStyle]="{'background-color': i % 2 === 0 ? 'pink' : 'teal'}">
   <app-icecream-list-item [icecream]="icecream"></app-icecream-list-item>
 </div>
