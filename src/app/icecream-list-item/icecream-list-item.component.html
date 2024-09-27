@@ -1,8 +1,6 @@
-<div *ngIf="icecream" class="icecream-detail">
-  <h1>Icecream Details</h1>
-  <p><strong>ID:</strong> {{ icecream.id }}</p>
-  <p><strong>Flavour:</strong> {{ icecream.flavour }}</p>
-  <p><strong>Brand:</strong> {{ icecream.brand }}</p>
-  <p><strong>Price:</strong> {{ icecream.price }}</p>
-  <p><strong>Toppings:</strong> {{ icecream.toppings ? 'Yes' : 'No' }}</p>
+<div class="icecream-container">
+  <h3>{{ icecream.flavour }}</h3>
+  <p>Brand: {{ icecream.brand }}</p>
+  <p>Price: ${{ icecream.price }}</p>
+  <p>Toppings: {{ icecream.toppings ? 'Yes' : 'No' }}</p>
 </div>
