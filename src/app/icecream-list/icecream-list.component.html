@@ -1,5 +1,3 @@
-<app-icecream-list-item>{{IcecreamList[0].flavour}}</app-icecream-list-item>
-<app-icecream-list-item>{{IcecreamList[1].flavour}}</app-icecream-list-item>
-<app-icecream-list-item>{{IcecreamList[2].flavour}}</app-icecream-list-item>
-<app-icecream-list-item>{{IcecreamList[3].flavour}}</app-icecream-list-item>
-<app-icecream-list-item>{{IcecreamList[4].flavour}}</app-icecream-list-item>
+<div *ngFor="let flavor of IcecreamList">
+  <app-ice-cream-list-item [flavor]="flavor"></app-ice-cream-list-item>
+</div>
