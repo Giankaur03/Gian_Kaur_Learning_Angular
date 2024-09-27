@@ -1,14 +1,5 @@
-<div>
-  <table>
-    <tbody>
-    <tr *ngFor="let icecream of IcecreamList" >
-
-      <td>{{ icecream.id }}</td>
-      <td>{{ icecream.flavour }}</td>
-      <td>{{ icecream.brand }}</td>
-      <td>{{ icecream.price }}</td>
-      <td>{{ icecream.toppings ? 'Yes' : 'No' }}</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+<app-icecream-list-item>{{IcecreamList[0].flavour}}</app-icecream-list-item>
+<app-icecream-list-item>{{IcecreamList[1].flavour}}</app-icecream-list-item>
+<app-icecream-list-item>{{IcecreamList[2].flavour}}</app-icecream-list-item>
+<app-icecream-list-item>{{IcecreamList[3].flavour}}</app-icecream-list-item>
+<app-icecream-list-item>{{IcecreamList[4].flavour}}</app-icecream-list-item>
