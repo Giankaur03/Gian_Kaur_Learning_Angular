@@ -1,1 +1,8 @@
-<p>icecream-list-item works!</p>
+<div *ngIf="icecream" class="icecream-detail">
+  <h1>Icecream Details</h1>
+  <p><strong>ID:</strong> {{ icecream.id }}</p>
+  <p><strong>Flavour:</strong> {{ icecream.flavour }}</p>
+  <p><strong>Brand:</strong> {{ icecream.brand }}</p>
+  <p><strong>Price:</strong> {{ icecream.price }}</p>
+  <p><strong>Toppings:</strong> {{ icecream.toppings ? 'Yes' : 'No' }}</p>
+</div>
