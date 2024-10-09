@@ -1,23 +1,37 @@
-import { Component } from '@angular/core';
-import {Icecream} from "../Shared/Modules/icecream";
-import {IcecreamListItemComponent} from "../icecream-list-item/icecream-list-item.component";
-import {NgForOf, NgStyle} from "@angular/common";
+import { Component, OnInit } from '@angular/core';
+import { IIceCream } from "../Shared/Modules/icecream";
+import { NgForOf } from "@angular/common";
+import { IceCreamService } from "../Services/IcecreamService";
 
 @Component({
-  selector: 'app-icecream-list',
+  selector: 'app-ice-cream-list',
   standalone: true,
   imports: [
-    IcecreamListItemComponent,
-    NgStyle,
     NgForOf
   ],
-  templateUrl: './icecream-list.component.html',
-  styleUrl: './icecream-list.component.css'
+  templateUrl: './ice-cream-list.component.html',
+  styleUrls: ['./ice-cream-list.component.scss']
 })
-export class IcecreamListComponent {
+export class IceCreamListComponent implements OnInit {
 
-  displayedColumns:string[]= ['id', 'flavour', 'brand', 'price', 'toppings'];
-  IcecreamList: Icecream[] = [];
-  selectedIcecream: any;
+  displayedColumns: string[] = ['id', 'flavour', 'brand', 'price', 'toppings'];
+  iceCreamList: IIceCream[] = []; // Change userList to iceCreamList
 
+  constructor(private iceCreamService: IceCreamService) {
+
+  }
+
+  ngOnInit() {
+
+    this.iceCreamService.getIceCreams().subscribe({
+      next: (data: IIceCream[]) => this.iceCreamList = data,
+      error: err => console.error("Error fetching Ice Creams", err),
+      complete: () => console.log("Ice Cream data fetch complete!")
+    });
+  }
+
+  selectedIceCream?: IIceCream;
+  selectIceCream(iceCream: IIceCream): void {
+    this.selectedIceCream = iceCream;
+  }
 }
