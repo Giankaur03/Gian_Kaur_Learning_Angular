@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import {Icecream} from "../Shared/Modules/icecream";
 import {IcecreamListItemComponent} from "../icecream-list-item/icecream-list-item.component";
-import {NgStyle} from "@angular/common";
+import {NgForOf, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-icecream-list',
   standalone: true,
   imports: [
     IcecreamListItemComponent,
-    NgStyle
+    NgStyle,
+    NgForOf
   ],
   templateUrl: './icecream-list.component.html',
   styleUrl: './icecream-list.component.css'
