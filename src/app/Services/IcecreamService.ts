@@ -1,29 +1,29 @@
 import { Injectable } from '@angular/core';
-import { mockIcecream } from "../Shared/Modules/mock-icecream";
+import { IcecreamList } from "../Shared/Modules/mock-icecream";
 import { Observable, of } from 'rxjs';
-import { IIceCream } from "../Shared/Modules/icecream";
+import { Icecream } from "../Shared/Modules/icecream";
 
 @Injectable({
   providedIn: 'root'
 })
 export class IceCreamService {
-  private iceCreams: IIceCream[] = mockIcecream; // Local copy of ice cream data for CRUD operations
+  private iceCreams: Icecream[] = IcecreamList; // Local copy of ice cream data for CRUD operations
 
   constructor() { }
 
   // Returns all ice creams
-  getIceCreams(): Observable<IIceCream[]> {
+  getIceCreams(): Observable<Icecream[]> {
     return of(this.iceCreams); // Return an observable that emits the ice cream data
   }
 
   // Create: Add Ice Cream
-  addIceCream(newIceCream: IIceCream): Observable<IIceCream[]> {
+  addIceCream(newIceCream: Icecream): Observable<Icecream[]> {
     this.iceCreams.push(newIceCream);
     return of(this.iceCreams);
   }
 
   // Update an existing ice cream
-  updateIceCream(updatedIceCream: IIceCream): Observable<IIceCream[]> {
+  updateIceCream(updatedIceCream: Icecream): Observable<Icecream[]> {
     const index = this.iceCreams.findIndex(iceCream => iceCream.id === updatedIceCream.id);
     if (index !== -1) {
       this.iceCreams[index] = updatedIceCream;
@@ -32,13 +32,13 @@ export class IceCreamService {
   }
 
   // Delete: Remove an ice cream by ID
-  deleteIceCream(iceCreamId: number): Observable<IIceCream[]> {
+  deleteIceCream(iceCreamId: number): Observable<Icecream[]> {
     this.iceCreams = this.iceCreams.filter(iceCream => iceCream.id !== iceCreamId);
     return of(this.iceCreams);
   }
 
   // Get an ice cream by ID
-  getIceCreamById(iceCreamId: number): Observable<IIceCream | undefined> {
+  getIceCreamById(iceCreamId: number): Observable<Icecream | undefined> {
     const iceCream = this.iceCreams.find(iceCream => iceCream.id === iceCreamId);
     return of(iceCream);
   }

@@ -5,7 +5,3 @@ export interface Icecream {
   price: number;
   toppings?: boolean;
 }
-
-export class IIceCream {
-  id: any;
-}
