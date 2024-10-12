@@ -37,3 +37,6 @@ export class IceCreamListComponent implements OnInit {
     this.selectedIceCream = iceCream;
   }
 }
+
+export class IcecreamListComponent {
+}
