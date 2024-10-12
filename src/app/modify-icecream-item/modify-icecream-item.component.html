@@ -1,1 +1,39 @@
-<p>modify-icecream-item works!</p>
+<form [formGroup]="icecreamForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="number" id="id" formControlName="id" />
+  </div>
+
+
+  <div class="form-group">
+    <label for="flavour">Flavour</label>
+    <input type="text" id="flavour" formControlName="flavour" />
+  </div>
+
+  <div class="form-group">
+    <label for="brand">Brand</label>
+    <input type="text" id="brand" formControlName="brand" />
+  </div>
+
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" id="price" formControlName="price" step="0.01" />
+  </div>
+
+
+  <div class="form-group">
+    <label for="toppings">Has Toppings</label>
+    <input type="checkbox" id="toppings" formControlName="toppings" />
+  </div>
+
+
+  <button type="submit">Submit</button>
+
+
+  <button type="button" (click)="onDelete()">Delete</button>
+
+
+  <button type="button" (click)="navigateToIcecreamList()">Back to List</button>
+</form>
