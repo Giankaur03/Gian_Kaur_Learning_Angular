@@ -14,3 +14,6 @@ import {NgIf} from "@angular/common";
 export class IcecreamListItemComponent {
 @Input() icecream?: Icecream;
 }
+
+export class IcecreamDetailComponent {
+}
