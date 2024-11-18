@@ -1,4 +1,12 @@
 <div class = "app-container">
+  <nav>
+    <a routerLink="/PageNotFound" routerLinkActive="active"> Page not found</a>
+    <a routerLink="/modifyIcecream" routerLinkActive="active">Modify Icecream</a>
+  </nav>
+  </div>
+
+<div class="app-container">
   <h1>{{ title }}</h1>
-  <app-ice-cream-list></app-ice-cream-list>
+  <router-outlet></router-outlet>
+
 </div>
