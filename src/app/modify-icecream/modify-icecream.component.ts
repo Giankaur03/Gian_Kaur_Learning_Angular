@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import {IcecreamList} from "../Shared/Modules/mock-icecream";
 import {ActivatedRoute, Router} from "@angular/router";
 import {IceCreamService} from "../Services/IcecreamService";
+import {Icecream} from "../Shared/Modules/icecream";
 
 @Component({
   selector: 'app-modify-icecream',
@@ -31,10 +32,28 @@ export class ModifyIcecreamComponent implements OnInit{
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
+    const icecream: Icecream = this.IcecreamList.value;
 
+    console.log(icecream.id)
+    if (icecream.id) {
+      this.icecreamService.updateIceCream(icecream);
+    } else {
+
+      icecream.id = this.icecreamService.generateNewId();
+      this.icecreamService.addIceCream(icecream);
+    }
+
+    this.router.navigate(['/icecream']);
   }
 
+  onDelete(): void {
+    const id = this.IcecreamList.get('id')?.value;
+    if (id) {
+      this.icecreamService.deleteIceCream(id);
+      this.router.navigate(['/icecream']);
+    }
+  }
   navigateToIcecreamList() {
     this.router.navigate(['/icecream'])
 

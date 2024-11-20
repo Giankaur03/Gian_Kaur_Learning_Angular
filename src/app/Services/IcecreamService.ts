@@ -42,4 +42,8 @@ export class IceCreamService {
     const iceCream = this.iceCreams.find(iceCream => iceCream.id === iceCreamId);
     return of(iceCream);
   }
+
+  generateNewId(): number{
+    return this.iceCreams.length > 0 ? Math.max(...this.iceCreams.map(iceCream => iceCream.id)) +1 : 1;
+  }
 }
