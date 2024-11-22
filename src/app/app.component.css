@@ -12,10 +12,11 @@ h1{
 }
 
 h2{
-  color: #184e35;
+  color: black;
   font-family: "Bookman Old Style";
   margin-left: 10px;
   font-size: 30px;
+  text-align: center;
 }
 
 .books {

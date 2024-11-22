@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Icecream } from "../Shared/Modules/icecream";
-import { NgForOf } from "@angular/common";
+import {DatePipe, NgForOf} from "@angular/common";
 import { IceCreamService } from "../Services/IcecreamService";
 import {IcecreamListItemComponent} from "../icecream-list-item/icecream-list-item.component";
 
@@ -8,12 +8,14 @@ import {IcecreamListItemComponent} from "../icecream-list-item/icecream-list-ite
   selector: 'app-ice-cream-list',
   standalone: true,
   imports: [
-    NgForOf, IcecreamListItemComponent
+    NgForOf, IcecreamListItemComponent, DatePipe
   ],
   templateUrl: './icecream-list.component.html',
   styleUrls: ['./icecream-list.component.css']
 })
 export class IceCreamListComponent implements OnInit {
+
+
 
   displayedColumns: string[] = ['id', 'flavour', 'brand', 'price', 'toppings'];
   iceCreamList: Icecream[] = [];

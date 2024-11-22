@@ -1,7 +1,7 @@
 <div *ngIf = 'icecream' class="icecream-container">
   <p>{{icecream.id}}</p>
   <h3>{{ icecream.flavour }}</h3>
-  <p>Brand: {{ icecream.brand }}</p>
-  <p>Price: ${{ icecream.price }}</p>
+  <p>Brand: {{ icecream.brand | uppercase }}</p>
+  <p>Price: ${{ icecream.price | currency : 'CAN'}}</p>
   <p>Toppings: {{ icecream.toppings ? 'Yes' : 'No' }}</p>
 </div>

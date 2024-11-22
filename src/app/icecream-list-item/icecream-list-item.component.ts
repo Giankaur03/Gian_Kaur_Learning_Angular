@@ -1,12 +1,14 @@
 import {Component, Input} from '@angular/core';
 import {Icecream} from "../Shared/Modules/icecream";
-import {NgIf} from "@angular/common";
+import {CurrencyPipe, NgIf, UpperCasePipe} from "@angular/common";
 
 @Component({
   selector: 'app-icecream-list-item',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    UpperCasePipe,
+    CurrencyPipe
   ],
   templateUrl: './icecream-list-item.component.html',
   styleUrl: './icecream-list-item.component.css'
