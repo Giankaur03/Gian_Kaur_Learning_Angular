@@ -1,13 +1,13 @@
 <div class = "app-container">
   <nav>
-    <a routerLink="/PageNotFound" routerLinkActive="active"> Page not found</a>
-    <a routerLink="/modifyIcecream" routerLinkActive="active">Modify Icecream</a>
+    <a routerLink="/icecream" routerLinkActive="active"> Home Page </a>
+    <a routerLink="/modifyIcecream" routerLinkActive="active">Modify Icecream </a>
   </nav>
   </div>
 
 <div class="app-container">
   <h1>{{ title }}</h1>
-  <h2>Today's Date:{{todayDate|date}}</h2>
+  <h2>Today's Date: {{todayDate|date}}</h2>
   <router-outlet></router-outlet>
 
 </div>
