@@ -3,13 +3,14 @@ import { Icecream } from "../Shared/Modules/icecream";
 import {DatePipe, NgForOf} from "@angular/common";
 import { IceCreamService } from "../Services/IcecreamService";
 import {IcecreamListItemComponent} from "../icecream-list-item/icecream-list-item.component";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 
 @Component({
   selector: 'app-ice-cream-list',
   standalone: true,
   imports: [
-    NgForOf, IcecreamListItemComponent, DatePipe
+    NgForOf, IcecreamListItemComponent, DatePipe, HoverHighlightDirective
   ],
   templateUrl: './icecream-list.component.html',
   styleUrls: ['./icecream-list.component.css']

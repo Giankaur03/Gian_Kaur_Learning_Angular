@@ -4,9 +4,9 @@
   <table>
 
     <tbody>
-    <tr *ngFor="let icecream of iceCreamList" >
+    <tr *ngFor="let icecream of iceCreamList" [appHoverHighlight]="'teal'">
 
-      <app-icecream-list-item [icecream]="icecream"></app-icecream-list-item>
+      <app-icecream-list-item [icecream]="icecream" ></app-icecream-list-item>
     </tr>
     </tbody>
   </table>
