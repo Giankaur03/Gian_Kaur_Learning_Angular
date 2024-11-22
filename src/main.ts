@@ -11,10 +11,18 @@ import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.compone
 
 const routes: Routes = [
   {path:'', redirectTo: '/icecream', pathMatch: 'full'},
-  {path:'icecream', component: IceCreamListComponent },
-  {path:'icecreamList', component: IcecreamListItemComponent },
-  {path: 'modifyIcecream', component: ModifyIcecreamComponent },
-  {path: '**', component: PageNotFoundComponent }
+  {path:'icecream', component: IceCreamListComponent }, // leave this as it is as eagerly loading
+  {path:'icecreamList',
+  loadComponent: () =>
+  import('./app/icecream-list-item/icecream-list-item.component').then(m =>m.IcecreamListItemComponent) },
+
+  {path: 'modifyIcecream',
+  loadComponent: () =>
+  import('./app/modify-icecream/modify-icecream.component').then(m => m.ModifyIcecreamComponent)},
+
+  {path: '**',
+  loadComponent: () =>
+  import('./app/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)}
 ]
 bootstrapApplication(AppComponent, {
   providers: [provideRouter(routes)]
