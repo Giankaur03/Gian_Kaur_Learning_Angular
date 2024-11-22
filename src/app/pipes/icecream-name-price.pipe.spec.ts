@@ -6,3 +6,4 @@ describe('IcecreamNamePricePipe', () => {
     expect(pipe).toBeTruthy();
   });
 });
+

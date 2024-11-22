@@ -11,4 +11,5 @@ export class IcecreamNamePricePipe implements PipeTransform {
     return `${icecream.id} ${icecream.flavour}`
   }
 
+
 }

@@ -15,3 +15,4 @@ export class AppComponent {
   title= 'Icecream';
   todayDate:string = '2024/11/22';
 }
+

@@ -4,4 +4,5 @@ export interface Icecream {
   brand: string;
   price: number;
   toppings?: boolean;
+
 }

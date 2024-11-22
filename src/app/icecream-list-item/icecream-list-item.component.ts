@@ -18,3 +18,4 @@ import {IcecreamNamePricePipe} from "../pipes/icecream-name-price.pipe";
 export class IcecreamListItemComponent {
 @Input() icecream?: Icecream;
 }
+

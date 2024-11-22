@@ -4,6 +4,7 @@ import {DatePipe, NgForOf} from "@angular/common";
 import { IceCreamService } from "../Services/IcecreamService";
 import {IcecreamListItemComponent} from "../icecream-list-item/icecream-list-item.component";
 
+
 @Component({
   selector: 'app-ice-cream-list',
   standalone: true,

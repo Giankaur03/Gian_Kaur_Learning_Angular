@@ -24,6 +24,7 @@ const routes: Routes = [
   loadComponent: () =>
   import('./app/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)}
 ]
+
 bootstrapApplication(AppComponent, {
   providers: [provideRouter(routes)]
 }).then(r => console.log('Bootstrap successful'));
