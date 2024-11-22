@@ -4,12 +4,14 @@ import {IcecreamList} from "../Shared/Modules/mock-icecream";
 import {ActivatedRoute, Router} from "@angular/router";
 import {IceCreamService} from "../Services/IcecreamService";
 import {Icecream} from "../Shared/Modules/icecream";
+import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 
 @Component({
   selector: 'app-modify-icecream',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightOnFocusDirective
   ],
   templateUrl: './modify-icecream.component.html',
   styleUrl: './modify-icecream.component.css'
